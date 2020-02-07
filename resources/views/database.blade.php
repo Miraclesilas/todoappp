@@ -34,7 +34,7 @@
                         <span aria-hidden="true">&times;</span></button>
                           </div>
                           @endif
-                        <table class="table table-striped table-resondsive ">
+                        <table class="table table-striped table-responsive ">
                                 <div class="row">
 
                               
@@ -63,12 +63,13 @@
                                                                         <a class="btn btn-xs btn-success  " style="border-radius:10px;" href="{{route('edit', $tasks->id )}}"><b style="color:whitesmoke;"></b> Edit</a>    
 
                                                                 </div>
-                                                                        
+                                                        </td>
+                                                <td> 
                                                                         <div class="col float-right flex">
                                                                                 <a class="btn btn-xs btn-danger text-white " style="border-radius:10px;" href="{{route('destroy', $tasks->id)}}"> ❌ Delete</a>                                                                   
 
                                                                         </div>
-                                                                
+                                                </td>
                                                         </div>
                                                 </td>
                                         </div>       
