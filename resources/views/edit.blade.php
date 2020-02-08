@@ -1,9 +1,14 @@
-@extends('Layouts.css')
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <title>Edit task</title>
 <br>
 
-<div class="jumbotron col-md-7 "style="padding:30px">
-   <strong><h2><b style="margin-top:-80px">EDIT WORK</b></h2></strong>
+
+<div class="container">
+             
+<div class="jumbotron  "style="padding:30px">
+   <strong class="text-center"><h2><b style="margin-top:-80px">EDIT TASK</b></h2></strong>
 <br>
    @if(session()->has('success'))
         <div class ="alert alert-primary">
@@ -48,8 +53,7 @@
 
 
 
-
-
+</div>
 
 
 

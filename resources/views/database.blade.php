@@ -1,8 +1,10 @@
-@extends('Layouts.css')
+
 
 
 @section('content')
 <title>Todo list</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
                       {{-- <a class="btn btn primary text -yellow color:blue;" href="{{route('index')}}">Create Post</a>
                       <div class="ml-3 w-50 mt-1 mr-auto"></div> --}}
                       
@@ -13,14 +15,15 @@
              {{-- <div class="jumbotron col-10 p-5">
                      <div class="ml-3 w-50 mt-2 "><a class="btn btn-primary  " href="{{route('index')}}">Create New Task</a></div>
                      <div class="row">
-                             {{-- <div class="col "> --}}
+                             {{-- <div class="col "> --}}    
 
 
-                                     
-        <div class="jumbotron col-11 md-6 xs-3" style="margin-left:40px; auto">
+                       <div class="container">
+                                                               
+        <div class="jumbotron  md-6 " style="margin-left:40px; auto">
                 <div class="ml-3 w-50 mt-1 mr-auto">
                         <a class="btn btn-primary  
-                        " style="margin-top:-69px;margin-left:-45px;"
+                        " style="margin-top:-69px;margin-left:-51px;"
                          href="{{route('index')}}">Create a New Task Todo 📫
                         </a>
                 </div>
@@ -60,7 +63,7 @@
                                                 <td>
                                                         <div class="row flex">
                                                                 <div class="col float-left">
-                                                                        <a class="btn btn-xs btn-success  " style="border-radius:10px;" href="{{route('edit', $tasks->id )}}"><b style="color:whitesmoke;"></b> Edit</a>    
+                                                                        <a class="btn btn-xs btn-success  " style="border-radius:10px;" href="{{route('edit', $tasks->id )}}"><b style="color:whitesmoke;"></b>🔩 Edit</a>    
 
                                                                 </div>
                                                         </td>
@@ -81,4 +84,6 @@
              </div>
 </div>
 
+
+                       </div>
 
