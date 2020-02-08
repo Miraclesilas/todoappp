@@ -10,7 +10,7 @@
 
 
 <a href="{{route('database')}}"></a>
-<br> <div class="jumbotron pl-5 center col-md-8" style="margin-left:40px;">
+<br> <div class="jumbotron pl-5 center col-md-11" style="margin-left:40px;">
     <a class="float-right btn btn-info" style="margin-top:-60px;margin-right:-30px;" href="{{route('database')}}">view tasks</a>
 
                  <div class="text-info">

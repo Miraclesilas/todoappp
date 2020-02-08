@@ -7,7 +7,7 @@
 
 <div class="container">
              
-<div class="jumbotron  "style="padding:30px">
+<div class="jumbotron col-md-11 "style="padding:30px">
    <strong class="text-center"><h2><b style="margin-top:-80px">EDIT TASK</b></h2></strong>
 <br>
    @if(session()->has('success'))

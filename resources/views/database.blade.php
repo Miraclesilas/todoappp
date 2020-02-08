@@ -20,7 +20,7 @@
 
                        <div class="container">
                                                                
-        <div class="jumbotron  md-6 " style="margin-left:40px; auto">
+        <div class="jumbotron col-md-11 " style="margin-left:40px; auto">
                 <div class="ml-3 w-50 mt-1 mr-auto">
                         <a class="btn btn-primary  
                         " style="margin-top:-69px;margin-left:-51px;"
