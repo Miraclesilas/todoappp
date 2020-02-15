@@ -20,70 +20,88 @@
 
                        <div class="container">
                                                                
-        <div class="jumbotron  " >
-                <div class="ml-3 w-50 mt-1 mr-auto">
+        <div class="jumbotron " >
+                <div class=" w-50 mt-1 ">
                         <a class="btn btn-primary  
-                        " style="margin-top:-69px;margin-left:-51px;"
+                        " style="margin-top:-69px;margin-left:-32px;"
                          href="{{route('index')}}">Create a New Task Todo 📫
                         </a>
                 </div>
-                 <div class="row">
-                    <div class="col-11">
-                                     @if(session()->has('delete'))
-                                        <div class= "alert alert-danger">
-                        
-                                        {{session()->get ('delete')}}
-                                   <button type="button" class="close" data dismiss="alert" aria-label="close">
-                        <span aria-hidden="true">&times;</span></button>
-                          </div>
-                          @endif
-                        <table class="table table-striped table-responsive ">
-                                <div class="row">
-
-                              
-                                             <thead> 
-                                                     <tr>
-                                                             <th>No.</th>
-                                                             <th>Name</th>
-                                                             <th>Activity</th>
-                                                             <th>Time to execute</th>
-                                                             <th>Created at</th>
-                                                             <th class="text-center text-bold " >Action</th>
-                                                     </tr>
-                                             </thead>
-                 
-                                        <tbody>
-                                                @foreach($task as $tasks)
-                                                <tr>
-                                                <th>{{$loop->index + 1}}</th>
-                                                <td>{{$tasks->name}}</td>
-                                                <td>{{$tasks->activity}}</td>
-                                                <td>{{$tasks->when}}</td> 
-                                                <td>{{$tasks->created_at->diffforHumans()}}</td>
-                                                <td>
-                                                        <div class="row flex">
-                                                                <div class="col float-left">
-                                                                        <a class="btn btn-xs btn-success  " style="border-radius:10px;" href="{{route('edit', $tasks->id )}}"><b style="color:whitesmoke;"></b>🔩 Edit</a>    
+                    <br><br>
+                       <div class="col">
+                        @if(session()->has('delete'))
+                        <div class= "alert alert-danger">
+        
+                        {{session()->get ('delete')}}
+                   <button type="button" class="close" data dismiss="alert" aria-label="close">
+        <span aria-hidden="true">&times;</span></button>
+          </div>
+          @endif  
+                       </div>
+                           <div class="table table-striped table-responsive">
+                                <table class="col-11">
+                                        <strong> <thead class=" text-ceneter "> 
+                                               <tr>
+                                                        <th>No.</th>
+                                                        <th>Name</th>
+                                                        <th>Activity</th>
+                                                        <th>Time to execute</th>
+                                                        <th>Created at</th>
+                                                        <th class="text-center text-bold " >Action</th>
+                                                </tr>
+                                                </thead></strong>
+                                                <tbody>
+                                                        @foreach($task as $tasks)
+                                                        <tr>
+                                                        <th>{{$loop->index + 1}}</th>
+                                                        <td>{{$tasks->name}}</td>
+                                                        <td>{{$tasks->activity}}</td>
+                                                        <td>{{$tasks->when}}</td> 
+                                                        <td>{{$tasks->created_at->diffforHumans()}}</td>
+                                                        <td><div class=" d-flex">
+                                                                <div class="col-md- float-left">
+                                                                        <a class="btn btn-xs btn-success " style="border-radius:10px;"
+                                                                         href="{{route('edit', $tasks->id )}}"><b style="color:whitesmoke;"></b><strong>🔩 Edit</strong> </a> 
+                                                                </div>
+                                                                <div class="col float-right flex">
+                                                                        <a class="btn btn-xs btn-danger text-white " style="border-radius:10px;" href="{{route('destroy', $tasks->id)}}"> ❌ Delete</a>                                                                   
 
                                                                 </div>
+                                                            </div>
                                                         </td>
-                                                <td> 
-                                                                        <div class="col float-right flex">
-                                                                                <a class="btn btn-xs btn-danger text-white " style="border-radius:10px;" href="{{route('destroy', $tasks->id)}}"> ❌ Delete</a>                                                                   
+                                                        
 
-                                                                        </div>
-                                                </td>
-                                                        </div>
-                                                </td>
-                                        </div>       
-                                                @endforeach
-                                        </tbody>
-                        </table>
-                             
-                     </div>
-             </div>
+                                                        @endforeach     
+                                                </tbody>
+                                          
+
+
+
+
+
+
+                                </table> 
+                                
+                           </div><br><br><br>
+       <div class="text-center footer"> Project create 2.0 @ <b>Start Innovation Hub </b> <i class="text-info"> copy 2020</i> Miracle™</div>
+
+
+
+
+
+
+
+
+
+
+
+              
 </div>
 
 
                        </div>
 
+<style>
+        td{font-size: 19px}
+        th{font-size: 25px}
+</style>

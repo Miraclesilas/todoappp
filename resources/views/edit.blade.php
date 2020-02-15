@@ -7,7 +7,7 @@
 
 <div class="container">
              
-<div class="jumbotron col-md-11 "style="padding:30px">
+<div class="jumbotron col-11 "style="padding:30px">
    <strong class="text-center"><h2><b style="margin-top:-80px">EDIT TASK</b></h2></strong>
 <br>
    @if(session()->has('success'))
@@ -21,23 +21,23 @@
 <br>
 
 
-   <div class="col-11 ">
+   <div class="col ">
       <form action="{{route('update', $task->id)}}" method="POST">
          @csrf
          <div class ="form-group">
-         <label>Name:</label><input type ="text" class ="form-control" placeholder ="enter name" name ="name" required value ="{{$task->name}}">
+         <label><h3>Name:</h3></label><input type ="text" class ="form-control" placeholder ="enter name" name ="name" required value ="{{$task->name}}">
          </div>
          <div class ="form-group">
-         <label>Activity:</label><textarea type ="text" class ="form-control" placeholder ="Enter new Task....." name ="activity" required value ="">{{$task->activity}}</textarea>
+         <label><h3>Activity:</h3></label><textarea type ="text" class ="form-control" placeholder ="Enter new Task....." name ="activity" required value ="">{{$task->activity}}</textarea>
          </div>
          <div class ="form-group">
-         <label>Message:</label><input  type ="date" class ="form-control" placeholder ="enter message" name ="when" required value ="{{$task->when}}">
+         <label><h3>Message:</h3></label><input  type ="date" class ="form-control" placeholder ="enter message" name ="when" required value ="{{$task->when}}">
          </div>
          <div class ="form-row text-left">
          <button type ="submit" class ="btn btn-primary ">Make changes</button>
             
             &emsp;
-         <a href="{{route('database')}}" class ="btn btn-secondary "> <b>↩</b> Back</a>
+         <a href="{{route('database')}}" class ="btn btn-secondary "> <b>↩</b><strong> Back</strong></a>
          </div>
       </form>
    </div>

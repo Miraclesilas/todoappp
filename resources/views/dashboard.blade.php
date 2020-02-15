@@ -10,8 +10,8 @@
 
 
 <a href="{{route('database')}}"></a>
-<br> <div class="jumbotron pl-5 center col-md-11" style="margin-left:40px;">
-    <a class="float-right btn btn-info" style="margin-top:-60px;margin-right:-30px;" href="{{route('database')}}">view tasks</a>
+<br> <div class="jumbotron pl-5 col-9 " style="margin-left:100px;">
+    <a class="float-right btn btn-info" style="margin-top:-60px;margin-right:-30px;" href="{{route('database')}}"><strong>view tasks</strong></a>
 
                  <div class="text-info">
                     <h1 class="text-center "> <b class=" btn btn-gray text-dark" style="font-family:Lucida Sans Unicode;font-size:50px" ><strong>Create a Task Todo</strong></b> </h1>
@@ -24,27 +24,28 @@
         </div>
     @endif 
     
-        <form action="{{route('create')}}" method="post">
+        <form action="{{route('create')}}" method="post" class="col-9 p-5 pl-5">
             @csrf
             <div class ="form-group">
-            <label>Name:</label><input type ="text" class ="form-control" placeholder ="Name" name ="name" required>
+            <label><h3>Name:</h3></label><input type ="text" class ="form-control" placeholder ="Name" name ="name" required>
             </div>
             <div class ="form-group">
-                <label for="">Todo</label>
+                <label for=""><h3>Todo :</h3></label>
             <textarea type ="text" class ="form-control" placeholder ="......📌" name ="activity" required></textarea>
             </div>
             <div class ="form-group">
-               <label>Time 🔔:</label><input type ="date" class ="form-control" placeholder ="Time" name ="when" required>
+               <label><h3>Time 🔔:</h3></label><input type ="date" class ="form-control" placeholder ="Time" name ="when" required>
             </div>
             
             
-                <button type="submit" class="btn btn-primary float-left">submit</button>
+                <button type="submit" class="btn btn-primary float-left"><strong>Submit</strong></button>
                 
                         
             
          </form>
        <br><br><br>
-       <marquee behavior="1" direction=""><b>it's a new Day , <strong>set a <i class="text-success">Target </i></strong></b></marquee>
+       <div class="text-center footer"> Project create 2.0 @ <b>Start Innovation Hub </b> <i class="text-info"> copy 2020</i> Miracle™</div>
+       {{-- <marquee behavior="1" direction=""><b>it's a new Day , <strong>set a <i class="text-success">Target </i></strong></b></marquee> --}}
 </div>
 
 
